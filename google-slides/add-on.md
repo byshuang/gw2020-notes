@@ -61,20 +61,17 @@ Add `Page.html` too in the folder
 
 5. Page.html ajax call
 ```html
-    <script>
-      function onSuccess(cats) {
-        var div = document.getElementById('output');
-     for (var i = 0; i < cats.length; i++) {
-     div.innerHTML += '<img draggable src="' + cats[i].file + '" />';
-     }
-      
-  
-      }
+<script>
+  function onSuccess(cats) {
+    var div = document.getElementById('output');
+    for (var i = 0; i < cats.length; i++) {
+      div.innerHTML += '<img draggable src="' + cats[i].file + '" />';
+    }
+  }
 
-      google.script.run.withSuccessHandler(onSuccess)
-          .getCats();
-    </script>
-
+  google.script.run.withSuccessHandler(onSuccess)
+      .getCats();
+</script>
 ```
 and in the `Code.gs`
 
